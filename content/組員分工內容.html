@@ -2,7 +2,7 @@
         <head>
         <title>2b3-pj3bg1</title>
         <meta charset="utf-8">
-<meta property="head" content="H2">
+<meta property="head" content="H1">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
         <link href="https://fonts.googleapis.com/css?family=Quicksand:300,400,500,700,900" rel="stylesheet">
         <link rel="stylesheet" href="./../cmsimde/static/chimper/fonts/icomoon/style.css">
@@ -130,7 +130,7 @@ img.add_border {
                             <li><a href="./../blog/index.html">blog</a></li>
                         </ul>
                       </li>
-                     <li><a href='About.html'>About</a><li><a href='group.html'>group</a><li><a href='pj3.html'>pj3</a><li class='has-children'><a href='pj2.html'>pj2</a><ul class='dropdown'><li><a href='補充.html'>補充</a></li></ul><li class='has-children'><a href='w9.html'>w9</a><ul class='dropdown'><li><a href='40723217-w9.html'>40723217-w9</a><li><a href='40923219-w9.html'>40923219-w9</a><li><a href='40923225-w9.html'>40923225-w9</a><li><a href='40923246-w9.html'>40923246-w9</a></li></ul><li class='has-children'><a href='w10.html'>w10</a><ul class='dropdown'><li><a href='40723217-W10.html'>40723217-W10</a></li></ul><li class='has-children'><a href='w11.html'>w11</a><ul class='dropdown'><li><a href='40723217-w11.html'>40723217-w11</a><li><a href='40923225-w11.html'>40923225-w11</a><li><a href='40923246-w11.html'>40923246-w11</a></li></ul><li><a href='w12.html'>w12</a><li><a href='Scenes.html'>Scenes</a><li><a href='會議記錄.html'>會議記錄</a><li class='has-children'><a href='Brython.html'>Brython</a><ul class='dropdown'><li><a href='Brython_ex2.html'>Brython_ex2</a></li>
+                     <li><a href='About.html'>About</a><li><a href='group.html'>group</a><li class='has-children'><a href='pj3.html'>pj3</a><ul class='dropdown'><li><a href='會議記錄.html'>會議記錄</a><li><a href='下載專區.html'>下載專區</a></li></ul><li class='has-children'><a href='組員分工內容.html'>組員分工內容</a><ul class='dropdown'><li><a href='40723217-pj3.html'>40723217-pj3</a><li><a href='40923219-pj3.html'>40923219-pj3</a><li><a href='40923225-pj3.html'>40923225-pj3</a><li><a href='40923241-pj3.html'>40923241-pj3</a><li><a href='40923246-pj3.html'>40923246-pj3</a><li><a href='40971219-pj3.html'>40971219-pj3</a><li><a href='40971220-pj3.html'>40971220-pj3</a></li></ul><li class='has-children'><a href='Brython.html'>Brython</a><ul class='dropdown'><li><a href='Brython_ex2.html'>Brython_ex2</a></li>
                       </ul>
                 </nav>
               </div>
@@ -141,91 +141,8 @@ img.add_border {
           </div>
           
         </header>
-    <div id="tipue_search_content">w10 << <a href='w10.html'>Previous</a> <a href='w11.html'>Next</a> >> w11<br /><h1>40723217-W10</h1>
-<p>我在4/25嘗試為我的red-green-bubbleRob添加了記分板、球場等內容，製作這些使用了第十組所製作的感測器與其他內容，並且使用了chatgpt去建構感測器中的lua指令，使感測器可以檢測物體並將球場重製與加分。</p>
-<p>這裡是chatgpt的內容問答:</p>
-<p><span>Q:coppeliasim 可以用lua程式操控物體的世界座標嗎? </span></p>
-<p><span>A:是的，您可以使用Lua脚本在CoppeliaSim中控制对象的世界坐标。 在CoppeliaSim中，您可以使用Lua脚本编写控制代码，以控制模型和仿真环境中的各种对象。通过编写Lua脚本，您可以访问对象的位置、旋转和缩放信息，并使用Lua脚本将对象移动到所需的位置。 例如，您可以使用以下代码将对象移动到世界坐标(x,y,z)： pos = {x,y,z} sim.setObjectPosition(objectHandle, -1, pos) 其中，objectHandle是对象的句柄，pos是一个包含x、y、z坐标的Lua表。sim.setObjectPosition函数将对象移动到指定的位置。</span></p>
-<p><span>Q:coppeliasim 可以用lua程式操控物體的世界角度嗎?</span></p>
-<p><span>A:是的，您可以使用Lua脚本在CoppeliaSim中控制对象的世界角度。 在CoppeliaSim中，您可以使用Lua脚本编写控制代码，以控制模型和仿真环境中的各种对象。通过编写Lua脚本，您可以访问对象的旋转信息，并使用Lua脚本将对象旋转到所需的角度。 例如，您可以使用以下代码将对象绕着Z轴旋转angle弧度： ang = {0,0,angle} sim.setObjectOrientation(objectHandle, -1, ang) 其中，objectHandle是对象的句柄，ang是一个包含绕x、y、z轴旋转的角度的Lua表。sim.setObjectOrientation函数将对象旋转到指定的角度。您可以根据需要修改ang表中的值来控制对象的旋转。</span></p>
-<p><span>Q:接著我將感測器的程式改寫如下:</span></p>
-<pre class="brush:lua;auto-links:false;toolbar:false" contenteditable="false">function sysCall_init()
-    sensor = sim.getObject('./sensor')
-    sensor2 = sim.getObject('./sensor2')
-    bubbleRob1 = sim.getObject('./bubbleRob1')
-    bubbleRob2 = sim.getObject('./bubbleRob2')
-    Sphere = sim.getObject('./ball')
-    pos1 = {-1,0,0.15}
-    pos2 = {1,0,0.15}
-    posS = {0,0,0.15}
-    ang1 = {0,0,0}
-    ang2 = {0,0,3.14}
-    bubbleRobBase = 4
-    ball = sim.getObject('./ball')
-    initialBubbleRobPosition = sim.getObjectPosition(bubbleRobBase, -1)
-    initialBubbleRobOrientation = sim.getObjectOrientation(bubbleRobBase, -1)
-    initialballPosition = sim.getObjectPosition(ball, -1)
-    initialballOrientation = sim.getObjectOrientation(ball, -1)
-    -- do some initialization here
-    count = 9000
-    score1 = 0
-    score2 = 0
-    xml = [[
-        &lt;ui closeable="false" resizeable="false" activate="false"&gt;
-            &lt;label text="0" style="* {background-color: #595; color: #000; font-size: 64px; font-weight: bold; padding: 4px; border-radius: 4px;}" id="10"/&gt;
-            &lt;label text="0" style="* {background-color: #A00; color: #FFF; font-size: 64px; font-weight: bold; padding: 4px; border-radius: 4px;}" id="20"/&gt;
-            &lt;label text="0" style="* {background-color: #00A; color: #FFF; font-size: 64px; font-weight: bold; padding: 4px; border-radius: 4px;}" id="30"/&gt;
-        &lt;/ui&gt;
-    ]] --
-    ui = simUI.create(xml)
-    simUI.setPosition(ui, 0,0, true)
-end
-function sysCall_actuation()
-    result=sim.readProximitySensor(sensor)
-    result2=sim.readProximitySensor(sensor2)
-    -- 0 or 1
-    if(result&gt;0)then
-        --sim.stopSimulation()
-        sim.setObjectPosition(bubbleRobBase, -1, initialBubbleRobPosition)
-        sim.setObjectOrientation(bubbleRobBase, -1, initialBubbleRobOrientation)
-        sim.setObjectPosition(ball, -1, initialballPosition)
-        sim.setObjectOrientation(ball, -1, initialballOrientation)
-        score1 = score1 +1 
-        sim.setObjectPosition(bubbleRob1, -1, pos1)
-        sim.setObjectPosition(bubbleRob2, -1, pos2)
-        sim.setObjectPosition(Sphere, -1, posS)
-        sim.setObjectOrientation(bubbleRob1, -1, ang1)
-        sim.setObjectOrientation(bubbleRob2, -1, ang2)
-    end
-    if(result2&gt;0)then
-        --sim.stopSimulation()
-        sim.setObjectPosition(bubbleRobBase, -1, initialBubbleRobPosition)
-        sim.setObjectOrientation(bubbleRobBase, -1, initialBubbleRobOrientation)
-        sim.setObjectPosition(ball, -1, initialballPosition)
-        sim.setObjectOrientation(ball, -1, initialballOrientation)
-        score2 = score2 +1 
-        sim.setObjectPosition(bubbleRob1, -1, pos1)
-        sim.setObjectPosition(bubbleRob2, -1, pos2)
-        sim.setObjectPosition(Sphere, -1, posS)
-        sim.setObjectOrientation(bubbleRob1, -1, ang1)
-        sim.setObjectOrientation(bubbleRob2, -1, ang2)
-    end
-    if count &gt; 0 then
-        count = count - 1
-        local minutes = math.floor(count / 60)
-        local seconds = count % 60
-        local timeStr = string.format("%d:%02d", minutes, seconds)
-        simUI.setLabelText(ui, 10, timeStr)
-        simUI.setLabelText(ui, 20, tostring(score1))
-        simUI.setLabelText(ui, 30, tostring(score2))
-    else
-        sim.stopSimulation()
-    end
-
-end</pre>
-<p></p>
-<p><span></span></p>
-<br />w10 << <a href='w10.html'>Previous</a> <a href='w11.html'>Next</a> >> w11</div>
+    <div id="tipue_search_content">下載專區 << <a href='下載專區.html'>Previous</a> <a href='40723217-pj3.html'>Next</a> >> 40723217-pj3<br /><h1>組員分工內容</h1>
+<br />下載專區 << <a href='下載專區.html'>Previous</a> <a href='40723217-pj3.html'>Next</a> >> 40723217-pj3</div>
         
     <!-- footer -->
       <div class="container">
