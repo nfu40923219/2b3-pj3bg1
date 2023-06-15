@@ -2,6 +2,7 @@
         <head>
         <title>2b3-pj3bg1</title>
         <meta charset="utf-8">
+<meta property="head" content="H3">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
         <link href="https://fonts.googleapis.com/css?family=Quicksand:300,400,500,700,900" rel="stylesheet">
         <link rel="stylesheet" href="./../cmsimde/static/chimper/fonts/icomoon/style.css">
@@ -140,18 +141,150 @@ img.add_border {
           </div>
           
         </header>
-    <div id="tipue_search_content"> <a href='group.html'>Next</a> >> group<br /><h1>About</h1>
-<p><a href="https://github.com/mdecd2023/2b3-pj3bg1">倉儲</a> <a href="https://mdecd2023.github.io/2b3-pj3bg1/">網站</a></p>
-<p>40723217 組長 nfu40723217 <a href="http://[2001:288:6004:17:2023:cdb:1:1]:23020/">第1個</a></p>
-<p>40923219 nfu<span>40923219 <a href="http://[2001:288:6004:17:2023:cdb:1:1]:23020/">第2個</a></span></p>
-<p>40923225 nfu40923225 <a href="http://[2001:288:6004:17:2023:cdb:1:1]:23020/">第3個</a></p>
-<p>40923241 nfu40923241 <a href="http://[2001:288:6004:17:2023:cdb:1:1]:23020/">第4個</a></p>
-<p>40923246 40923246 <a href="http://[2001:288:6004:17:2023:cdb:1:1]:23020/">第5個</a></p>
-<p>40971219 40971219 <a href="http://[2001:288:6004:17:2023:cdb:1:1]:23020/">第6個</a></p>
-<p>40971220 40971220 <a href="http://[2001:288:6004:17:2023:cdb:1:1]:23020/">第7個<br/><br/></a></p>
-<p><iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="allowfullscreen" frameborder="0" height="315" src="https://www.youtube.com/embed/oIVlelHfauQ" title="YouTube video player" width="560"></iframe></p>
-<p></p>
-<br /> <a href='group.html'>Next</a> >> group</div>
+    <div id="tipue_search_content">40923246-pj3 << <a href='40923246-pj3.html'>Previous</a> <a href='40971219-pj3.html'>Next</a> >> 40971219-pj3<br /><h1>40923246-程式</h1>
+<p>轉盤計分</p>
+<p><img alt="" height="282" src="./../images/w17_轉盤.png" width="298"/></p>
+<pre class="brush:lua;auto-links:false;toolbar:false" contenteditable="false">function sysCall_init()
+local math = require("math")
+joint1= sim.getObject('./joint1')
+joint2= sim.getObject('./joint2')
+ball= sim.getObject('./ball')
+sensor = sim.getObject('./sensor')
+r1 = 360
+r2 = 360
+r3 = 360
+r4 = 360
+sim.setJointTargetPosition(joint1, math.rad(r1+180))
+sim.setJointTargetPosition(joint2, math.rad(r2+180))
+
+initialballPosition = sim.getObjectPosition(ball, -1)
+initialballOrientation = sim.getObjectOrientation(ball, -1)
+end
+function sysCall_actuation()
+result = sim.readProximitySensor(sensor)
+if(r2&gt;0 and result&gt;0)then
+sim.setObjectPosition(ball, -1, initialballPosition)
+sim.setObjectOrientation(ball, -1, initialballOrientation)
+r1=r1-36
+sim.setJointTargetPosition(joint1, math.rad(r1+180))
+if(r1==0) then
+r1=360
+r2=r2-36
+sim.setJointTargetPosition(joint1, math.rad(r1+180))
+sim.setJointTargetPosition(joint2, math.rad(r2+180))
+end
+end
+end
+</pre>
+<p>顯示碰球球員及進球</p>
+<p><img alt="" height="297" src="./../images/w17_顯示板.png" width="439"/></p>
+<pre class="brush:lua;auto-links:false;toolbar:false" contenteditable="false">function sysCall_init()
+    sensor = sim.getObject('./sensor')
+    bubbleRobHandles = {}
+    ballHandle = -1
+    ballHandle = sim.getObjectHandle('./ball')
+    number=0
+    isred=0
+    count2=0
+    s0={1,1,1,1,1,0,1}
+    s1={0,0,1,1,0,0,0}
+    s2={0,1,1,0,1,1,1}
+    s3={0,0,1,1,1,1,1}
+    s4={1,0,1,1,0,1,0}
+    s5={1,0,0,1,1,1,1}
+    s6={1,1,0,1,1,1,1}
+    s7={0,0,1,1,1,0,0}
+    s8={1,1,1,1,1,1,1}
+    s9={1,0,1,1,1,1,1}
+    s={s0,s1,s2,s3,s4,s5,s6,s7,s8,s9}
+    for j = 0,6,1 do
+        local ng = sim.getObject('./nG_['..j..']')
+        if (s[1][j+1]==1) then
+            sim.setShapeColor(ng, nil, sim.colorcomponent_ambient_diffuse, {1, 1, 0})
+        else
+            sim.setShapeColor(ng, nil, sim.colorcomponent_ambient_diffuse, {1, 1, 1})
+        end
+    end
+    for j = 0,6,1 do
+        local n = sim.getObject('./N_['..j..']')
+            sim.setShapeColor(n, nil, sim.colorcomponent_ambient_diffuse, {1, 1, 0})
+    end
+    for go = 0,14,1 do
+        local goal = sim.getObject('./goal_['..go..']')
+            sim.setShapeColor(goal, nil, sim.colorcomponent_ambient_diffuse, {1, 1, 1})
+    end
+    _g_=sim.getObject('./_nG_')
+        sim.setShapeColor(_g_, nil, sim.colorcomponent_ambient_diffuse, {1, 1, 0})
+    for k = 1, 8 do
+        bubbleRobHandles[k] = sim.getObjectHandle('./bubbleRob'..k)
+    end
+end
+function sysCall_actuation()
+    result = sim.readProximitySensor(sensor)
+    for k = 1,8,1 do
+        local Handle = sim.checkCollision(bubbleRobHandles[k], ballHandle)
+        if Handle ~= 0 then
+            number = k
+            setDisplayDigit(k, k &lt;= 4)
+            break
+        end
+    end
+    if result&gt;0 then
+        count2=100
+        for go = 0,14,1 do
+            local goal = sim.getObject('./goal_['..go..']')
+            sim.setShapeColor(goal, nil, sim.colorcomponent_ambient_diffuse, {1, 1, 0})
+        end
+    elseif (result==0 and count2 &gt;0) then
+        count2=count2-1
+        if count2 ==0 then
+            for go = 0,14,1 do
+                local goal = sim.getObject('./goal_['..go..']')
+                sim.setShapeColor(goal, nil, sim.colorcomponent_ambient_diffuse, {1, 1, 1})
+            end
+            for i = 0, 8, 1 do
+                if (number == i) then
+                    for j = 0, 6, 1 do
+                        local ng = sim.getObject('./nG_['..j..']')
+                        local n = sim.getObject('./N_['..j..']')
+                        sim.setShapeColor(n, nil, sim.colorcomponent_ambient_diffuse, {1, 1, 0})
+                        sim.setShapeColor(_g_, nil, sim.colorcomponent_ambient_diffuse, {1, 1, 0})
+                        if (s[i+1][j+1] == 1) then
+                            sim.setShapeColor(ng, nil, sim.colorcomponent_ambient_diffuse, {1, 1, 0})
+                        end
+                    end
+                end
+            end
+        end
+    end
+end
+function setDisplayDigit(number, isgreen)
+    for i = 0, 8, 1 do
+        if (number == i) then
+            for j = 0, 6, 1 do
+                local ng = sim.getObject('./nG_['..j..']')
+                local n = sim.getObject('./N_['..j..']')
+                if isgreen then
+                    sim.setShapeColor(n, nil, sim.colorcomponent_ambient_diffuse, {0, 1, 0})
+                    sim.setShapeColor(_g_, nil, sim.colorcomponent_ambient_diffuse, {0, 1, 0})
+                else
+                    sim.setShapeColor(n, nil, sim.colorcomponent_ambient_diffuse, {1, 0, 0})
+                    sim.setShapeColor(_g_, nil, sim.colorcomponent_ambient_diffuse, {1, 0, 0})
+                end
+                if (s[i+1][j+1] == 1) then
+                    if isgreen then
+                    sim.setShapeColor(ng, nil, sim.colorcomponent_ambient_diffuse, {0, 1, 0})
+                    else
+                    sim.setShapeColor(ng, nil, sim.colorcomponent_ambient_diffuse, {1, 0, 0})
+                    end
+                else    
+                sim.setShapeColor(ng, nil, sim.colorcomponent_ambient_diffuse, {1, 1, 1})
+                end
+            end
+        end
+    end
+end
+</pre><br />40923246-pj3 << <a href='40923246-pj3.html'>Previous</a> <a href='40971219-pj3.html'>Next</a> >> 40971219-pj3</div>
         
     <!-- footer -->
       <div class="container">

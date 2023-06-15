@@ -1,0 +1,701 @@
+<!DOCTYPE html><html>
+        <head>
+        <title>2b3-pj3bg1</title>
+        <meta charset="utf-8">
+<meta property="head" content="H2">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <link href="https://fonts.googleapis.com/css?family=Quicksand:300,400,500,700,900" rel="stylesheet">
+        <link rel="stylesheet" href="./../cmsimde/static/chimper/fonts/icomoon/style.css">
+        <link rel="stylesheet" href="./../cmsimde/static/chimper/css/bootstrap.min.css">
+        <link rel="stylesheet" href="./../cmsimde/static/chimper/css/magnific-popup.css">
+        <link rel="stylesheet" href="./../cmsimde/static/chimper/css/jquery-ui.css">
+        <link rel="stylesheet" href="./../cmsimde/static/chimper/css/owl.carousel.min.css">
+        <link rel="stylesheet" href="./../cmsimde/static/chimper/css/owl.theme.default.min.css">
+        <link rel="stylesheet" href="./../cmsimde/static/chimper/css/bootstrap-datepicker.css">
+        <link rel="stylesheet" href="./../cmsimde/static/chimper/fonts/flaticon/font/flaticon.css">
+        <link rel="stylesheet" href="./../cmsimde/static/chimper/css/aos.css">
+        <link rel="stylesheet" href="./../cmsimde/static/chimper/css/style.css">
+        <link rel="shortcut icon" href="./../cmsimde/static/favicons.png">
+        
+        <style type='text/css'>
+            .site-section {
+            background-color: #FFFF;
+            padding: 40px 40px;
+            }
+            body > div > div.dropdown.open {
+                display: block;
+            }
+        </style>
+    
+        <!-- <script src="./../cmsimde/static/jquery.js"></script> -->
+        <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script> -->
+        <script src="../cmsimde/static/chimper/js/jquery-3.3.1.min.js"></script>
+        <link rel="stylesheet" href="./../cmsimde/static/tipuesearch/css/normalize.min.css">
+        <script src="./../cmsimde/static/tipuesearch/tipuesearch_set.js"></script>
+        <script src="tipuesearch_content.js"></script>
+        <link rel="stylesheet" href="./../cmsimde/static/tipuesearch/css/tipuesearch.css">
+        <script src="./../cmsimde/static/tipuesearch/tipuesearch.js"></script>
+        <!-- for Wink3 客製化關閉 -->
+        <!--
+        <link rel="stylesheet" type="text/css" href="./../cmsimde/static/winkPlayer.css" />
+        <script type="text/javascript" src="./../cmsimde/static/winkPlayer.js"></script>
+        -->
+        <script>
+            /* original tipuesearch
+            $(document).ready(function() {
+                 $('#tipue_search_input').tipuesearch();
+            });
+            */
+            // customed doSearch
+            function doSearch() {
+                $('#tipue_search_input').tipuesearch({
+                    newWindow: true, 
+                    minimumLength: 2,
+                    wholeWords: false, // for search 中文
+                });
+            }
+            $(document).ready(doSearch);
+        </script>
+        
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shCore.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushBash.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushDiff.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushJScript.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushJava.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushPython.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushSql.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushHaxe.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushXml.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushPhp.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushPowerShell.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushLua.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushCpp.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushCss.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushCSharp.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushDart.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushRust.js"></script>
+<link type="text/css" rel="stylesheet" href="./../cmsimde/static/syntaxhighlighter/css/shCoreDefault.css"/>
+<script type="text/javascript">SyntaxHighlighter.all();</script>
+<!-- 暫時不用
+<script src="./../cmsimde/static/fengari-web.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/Cango-13v08-min.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/CangoAxes-4v01-min.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/gearUtils-05.js"></script>
+-->
+<!-- for Brython 暫時不用
+<script src="https://scrum-3.github.io/web/brython/brython.js"></script>
+<script src="https://scrum-3.github.io/web/brython/brython_stdlib.js"></script>
+-->
+<style>
+img.add_border {
+    border: 3px solid blue;
+}
+</style>
+
+</head>
+<body>
+<div class='container'><nav>
+        
+    <div class="site-wrap">
+
+    <div class="site-mobile-menu">
+      <div class="site-mobile-menu-header">
+        <div class="site-mobile-menu-close mt-3">
+          <span class="icon-close2 js-menu-toggle"></span>
+        </div>
+      </div>
+      <div class="site-mobile-menu-body"></div>
+    </div>
+    
+            <header class="site-navbar py-4 bg-white" role="banner">
+              <div class="container">
+                <div class="row align-items-center">
+                <h1>2b3-pj3bg1</h1>
+                <div class="pl-4">
+                    <form>
+                    <input type="text" placeholder="Search" name="q" id="tipue_search_input" pattern=".{2,}" title="At least 2 characters" required>
+                    </form>
+                </div>
+                  <!-- <div class="col-11 col-xl-2">
+                    <h1 class="mb-0 site-logo"><a href="index.html" class="text-black h2 mb-0">2b3-pj3bg1</a></h1> 
+                  </div>
+                  -->
+                  <div class="col-12 col-md-10 d-none d-xl-block">
+                    <nav class="site-navigation position-relative text-right" role="navigation">
+    <ul class='site-menu js-clone-nav mr-auto d-none d-lg-block'>
+                        <li class="active has-children"><a href="index.html">Home</a>
+                        <ul class="dropdown">
+                            <li><a href="sitemap.html">Site Map</a></li>
+                            <li><a href="./../reveal/index.html">reveal</a></li>
+                            <li><a href="./../blog/index.html">blog</a></li>
+                        </ul>
+                      </li>
+                     <li><a href='About.html'>About</a><li><a href='group.html'>group</a><li class='has-children'><a href='pj3.html'>pj3</a><ul class='dropdown'><li><a href='程式.html'>程式</a><li><a href='會議記錄.html'>會議記錄</a><li><a href='下載專區.html'>下載專區</a></li></ul><li class='has-children'><a href='組員分工內容.html'>組員分工內容</a><ul class='dropdown'><li><a href='40723217-pj3.html'>40723217-pj3</a><li><a href='40923219-pj3.html'>40923219-pj3</a><li><a href='40923225-pj3.html'>40923225-pj3</a><li><a href='40923241-pj3.html'>40923241-pj3</a><li class='has-children'><a href='40923246-pj3.html'>40923246-pj3</a><ul class='dropdown'><li><a href='40923246-程式.html'>40923246-程式</a></li></ul><li><a href='40971219-pj3.html'>40971219-pj3</a><li><a href='40971220-pj3.html'>40971220-pj3</a></li></ul><li class='has-children'><a href='Brython.html'>Brython</a><ul class='dropdown'><li><a href='Brython_ex2.html'>Brython_ex2</a></li>
+                      </ul>
+                </nav>
+              </div>
+              <div class="d-inline-block d-xl-none ml-md-0 mr-auto py-3" style="position: relative; top: 3px;"><a href="#" class="site-menu-toggle js-menu-toggle text-black"><span class="icon-menu h3"></span></a></div>
+              </div>
+
+            </div>
+          </div>
+          
+        </header>
+    <div id="tipue_search_content">pj3 << <a href='pj3.html'>Previous</a> <a href='會議記錄.html'>Next</a> >> 會議記錄<br /><h1>程式</h1>
+<pre class="brush:lua;auto-links:false;toolbar:false" contenteditable="false">function sysCall_init()
+    bubbleRob1 = sim.getObject('./bubbleRob1')
+    bubbleRob2 = sim.getObject('./bubbleRob2')
+    bubbleRob3 = sim.getObject('./bubbleRob3')
+    bubbleRob4 = sim.getObject('./bubbleRob4')
+    bubbleRob5 = sim.getObject('./bubbleRob5')
+    bubbleRob6 = sim.getObject('./bubbleRob6')
+    bubbleRob7 = sim.getObject('./bubbleRob7')
+    bubbleRob8 = sim.getObject('./bubbleRob8')
+    sensor = sim.getObject('./sensor')
+    sensor2 = sim.getObject('./sensor2')
+    ball = sim.getObject('./ball')
+    
+    local math = require("math")
+    joint1 = sim.getObject('./joint1')
+    joint2 = sim.getObject('./joint2')
+    joint3 = sim.getObject('./joint3')
+    joint4 = sim.getObject('./joint4')
+    r1 = 360
+    r2 = 360
+    r3 = 360
+    r4 = 360
+    sim.setJointTargetPosition(joint1, math.rad(r1+180))
+    sim.setJointTargetPosition(joint2, math.rad(r2+180))
+    sim.setJointTargetPosition(joint3, math.rad(r3+180))
+    sim.setJointTargetPosition(joint4, math.rad(r4+180))
+    bubbleRobHandles = {}
+    leftHandles = {}
+    rightHandles = {}
+    ballHandle = -1
+    ballHandle = sim.getObjectHandle('./ball')
+    cuboidHandle = sim.getObjectHandle('./Cuboid')
+    number = 0
+    
+    pos1 = {0.5,1,0.2}
+    pos2 = {1,0.5,0.2}
+    pos3 = {1,-0.5,0.2}
+    pos4 = {0.5,-1,0.2}
+    pos5 = {-0.5,-1,0.2}
+    pos6 = {-1,-0.5,0.2}
+    pos7 = {-1,0.5,0.2}
+    pos8 = {-0.5,1,0.2}
+    posS = {0,0,0.2}
+    ang1 = {1.57,0,0}
+    ang2 = {0,0,3.14}
+    ang3 = {0,-1.57,-1.57}
+    ang4 = {0,0,0}
+    bubbleRobBase = 4
+    
+    score1 = 0
+    score2 = 0
+    score3 = 0
+    score4 = 0
+    count = 60000
+    count1 = 0
+    count2 = 0
+    score5 = 99
+    score6 = 0
+    score7 = 0
+    score8 = 1
+    s0={1,1,1,1,1,0,1}
+    s1={0,0,1,1,0,0,0}
+    s2={0,1,1,0,1,1,1}
+    s3={0,0,1,1,1,1,1}
+    s4={1,0,1,1,0,1,0}
+    s5={1,0,0,1,1,1,1}
+    s6={1,1,0,1,1,1,1}
+    s7={0,0,1,1,1,0,0}
+    s8={1,1,1,1,1,1,1}
+    s9={1,0,1,1,1,1,1}
+    s={s0,s1,s2,s3,s4,s5,s6,s7,s8,s9}
+    for j = 0,6,1 do
+     a = sim.getObject('./_G['..j..']')
+        if (s[1][j+1]==1) then
+            sim.setShapeColor(a, nil, sim.colorcomponent_ambient_diffuse, {1, 0, 0})
+        else
+            sim.setShapeColor(a, nil, sim.colorcomponent_ambient_diffuse, {1, 1, 1})
+        end
+    end
+    for j = 0,6,1 do
+     b = sim.getObject('./G_['..j..']')
+        if (s[1][j+1]==1) then
+            sim.setShapeColor(b, nil, sim.colorcomponent_ambient_diffuse, {1, 0, 0})
+        else
+            sim.setShapeColor(b, nil, sim.colorcomponent_ambient_diffuse, {1, 1, 1})
+        end
+    end
+    for j = 0,6,1 do
+     d = sim.getObject('./_R['..j..']')
+        if (s[1][j+1]==1) then
+            sim.setShapeColor(d, nil, sim.colorcomponent_ambient_diffuse, {0, 1, 0})
+        else
+            sim.setShapeColor(d, nil, sim.colorcomponent_ambient_diffuse, {1, 1, 1})
+        end
+    end
+    for j = 0,6,1 do
+     c = sim.getObject('./R_['..j..']')
+        if (s[1][j+1]==1) then
+            sim.setShapeColor(c, nil, sim.colorcomponent_ambient_diffuse, {0, 1, 0})
+        else
+            sim.setShapeColor(c, nil, sim.colorcomponent_ambient_diffuse, {1, 1, 1})
+        end
+    end
+    for j = 0,6,1 do
+        local g = sim.getObject('./_C['..j..']')
+        if (s[1][j+1]==1) then
+            sim.setShapeColor(g, nil, sim.colorcomponent_ambient_diffuse, {0, 0, 0})
+        else
+            sim.setShapeColor(g, nil, sim.colorcomponent_ambient_diffuse, {1, 1, 1})
+        end
+    end
+    for j = 0,6,1 do
+        local h = sim.getObject('./C_['..j..']')
+        if (s[1][j+1]==1) then
+            sim.setShapeColor(h, nil, sim.colorcomponent_ambient_diffuse, {0, 0, 0})
+        else
+            sim.setShapeColor(h, nil, sim.colorcomponent_ambient_diffuse, {1, 1, 1})
+        end
+    end
+    for j = 0,6,1 do
+        local e = sim.getObject('./__C['..j..']')
+        if (s[1][j+1]==1) then
+            sim.setShapeColor(e, nil, sim.colorcomponent_ambient_diffuse, {0, 0, 0})
+        else
+            sim.setShapeColor(e, nil, sim.colorcomponent_ambient_diffuse, {1, 1, 1})
+        end
+    end
+    for j = 0,6,1 do
+        local f = sim.getObject('./_C_['..j..']')
+        if (s[1][j+1]==1) then
+            sim.setShapeColor(f, nil, sim.colorcomponent_ambient_diffuse, {0, 0, 0})
+        else
+            sim.setShapeColor(f, nil, sim.colorcomponent_ambient_diffuse, {1, 1, 1})
+        end
+    end
+    for j = 0,6,1 do
+        local ng = sim.getObject('./nG_['..j..']')
+        if (s[1][j+1]==1) then
+            sim.setShapeColor(ng, nil, sim.colorcomponent_ambient_diffuse, {1, 1, 0})
+        else
+            sim.setShapeColor(ng, nil, sim.colorcomponent_ambient_diffuse, {1, 1, 1})
+        end
+    end
+    for j = 0,6,1 do
+        local n = sim.getObject('./N_['..j..']')
+            sim.setShapeColor(n, nil, sim.colorcomponent_ambient_diffuse, {1, 1, 0})
+    end
+    for go = 0,14,1 do
+        local goal = sim.getObject('./goal_['..go..']')
+            sim.setShapeColor(goal, nil, sim.colorcomponent_ambient_diffuse, {1, 1, 1})
+    end
+    _g_=sim.getObject('./_nG_')
+        sim.setShapeColor(_g_, nil, sim.colorcomponent_ambient_diffuse, {1, 1, 0})
+    for k = 1, 8 do
+        bubbleRobHandles[k] = sim.getObjectHandle('./bubbleRob'..k)
+        leftHandles[k] = sim.getObjectHandle('./leftWheel'..k)
+        rightHandles[k] = sim.getObjectHandle('./rightWheel'..k)
+    end
+end
+function sysCall_actuation()
+    result = sim.readProximitySensor(sensor)
+    for k = 1,8,1 do
+        Handle = sim.checkCollision(bubbleRobHandles[k], ballHandle)
+        if Handle ~= 0 then
+            number = k
+            setDisplayDigit(k, k &lt;= 4)
+            break
+        end
+    end
+    for k = 1,8,1 do
+        Handle = sim.checkCollision(leftHandles[k], ballHandle)
+        if Handle ~= 0 then
+            number = k
+            setDisplayDigit(k, k &lt;= 4)
+            break
+        end
+    end 
+    for k = 1,8,1 do
+        Handle = sim.checkCollision(rightHandles[k], ballHandle)
+        if Handle ~= 0 then
+            number = k
+            setDisplayDigit(k, k &lt;= 4)
+            break
+        end
+    end
+    for k = 1,8,1 do
+        Handle2 = sim.checkCollision(cuboidHandle, ballHandle)
+        if Handle2 ~= 0 then
+            sim.setObjectPosition(ball, -1, posS)
+            sim.setObjectOrientation(ball, -1, ang4)
+            break
+        end
+    end 
+    if(r2&gt;0 and result&gt;0)then
+        sim.setObjectPosition(ball, -1, posS)
+        sim.setObjectOrientation(ball, -1, ang4)
+        sim.setObjectPosition(bubbleRob1, -1, pos1)
+        sim.setObjectPosition(bubbleRob2, -1, pos2)
+        sim.setObjectPosition(bubbleRob3, -1, pos3)
+        sim.setObjectPosition(bubbleRob4, -1, pos4)
+        sim.setObjectPosition(bubbleRob5, -1, pos5)
+        sim.setObjectPosition(bubbleRob6, -1, pos6)
+        sim.setObjectPosition(bubbleRob7, -1, pos7)
+        sim.setObjectPosition(bubbleRob8, -1, pos8)
+        sim.setObjectOrientation(bubbleRob1, -1, ang3)
+        sim.setObjectOrientation(bubbleRob2, -1, ang1)
+        sim.setObjectOrientation(bubbleRob3, -1, ang1)
+        sim.setObjectOrientation(bubbleRob4, -1, ang4)
+        sim.setObjectOrientation(bubbleRob5, -1, ang2)
+        sim.setObjectOrientation(bubbleRob6, -1, ang2)
+        sim.setObjectOrientation(bubbleRob7, -1, ang2)
+        sim.setObjectOrientation(bubbleRob8, -1, ang2)
+        score1 = score1 + 1
+        r1=r1-36
+        sim.setJointTargetPosition(joint1, math.rad(r1+180))
+        count2=100
+        for go = 0,14,1 do
+            goal = sim.getObject('./goal_['..go..']')
+            sim.setShapeColor(goal, nil, sim.colorcomponent_ambient_diffuse, {1, 1, 0})
+        end
+        if(r1==0) then
+            r1=360
+            r2=r2-36
+            sim.setJointTargetPosition(joint1, math.rad(r1+180))
+            sim.setJointTargetPosition(joint2, math.rad(r2+180))
+        end
+        if (score1 &lt;= 9) then
+            i = score1 +1
+            for j = 0, 6, 1 do
+            a = sim.getObject('./_R['..j..']')          
+                if (s[i][j+1] == 1) then
+                    sim.setShapeColor(a, nil, sim.colorcomponent_ambient_diffuse, {0, 1, 0})
+                else
+                    sim.setShapeColor(a, nil, sim.colorcomponent_ambient_diffuse, {1, 1, 1})
+                end
+            end
+        elseif (score1 &gt; 9 and score2&lt;=9) then
+        score1 = 0
+            for j = 0, 6, 1 do
+            a = sim.getObject('./_R['..j..']')          
+                if (s[1][j+1] == 1) then
+                    sim.setShapeColor(a, nil, sim.colorcomponent_ambient_diffuse, {0, 1, 0})
+                else
+                    sim.setShapeColor(a, nil, sim.colorcomponent_ambient_diffuse, {1, 1, 1})
+                end
+            end
+            score2 = score2 + 1
+            i = score2 +1
+            for j = 0, 6, 1 do
+            b = sim.getObject('./R_['..j..']')
+                if (s[i][j+1] == 1) then
+                    sim.setShapeColor(b, nil, sim.colorcomponent_ambient_diffuse, {0, 1, 0})
+                else
+                    sim.setShapeColor(b, nil, sim.colorcomponent_ambient_diffuse, {1, 1, 1})
+                end
+            end
+        else
+            sim.pauseSimulation()
+        end    
+    end
+    if (count2&gt;0 and result==0)then
+        count2=count2-1
+        if count2 ==0 then
+            for go = 0,14,1 do
+                local goal = sim.getObject('./goal_['..go..']')
+                sim.setShapeColor(goal, nil, sim.colorcomponent_ambient_diffuse, {1, 1, 1})
+            end
+            for i = 0, 8, 1 do
+                if (number == i) then
+                    for j = 0, 6, 1 do
+                        local ng = sim.getObject('./nG_['..j..']')
+                        local n = sim.getObject('./N_['..j..']')
+                        sim.setShapeColor(n, nil, sim.colorcomponent_ambient_diffuse, {1, 1, 0})
+                        sim.setShapeColor(_g_, nil, sim.colorcomponent_ambient_diffuse, {1, 1, 0})
+                        if (s[i+1][j+1] == 1) then
+                            sim.setShapeColor(ng, nil, sim.colorcomponent_ambient_diffuse, {1, 1, 0})
+                        end
+                    end
+                end
+            end
+        end
+    end
+    result2 = sim.readProximitySensor(sensor2)
+    if(r4&gt;0 and result2&gt;0)then
+        sim.setObjectPosition(ball, -1, posS)
+        sim.setObjectOrientation(ball, -1, ang4)
+        sim.setObjectPosition(bubbleRob1, -1, pos1)
+        sim.setObjectPosition(bubbleRob2, -1, pos2)
+        sim.setObjectPosition(bubbleRob3, -1, pos3)
+        sim.setObjectPosition(bubbleRob4, -1, pos4)
+        sim.setObjectPosition(bubbleRob5, -1, pos5)
+        sim.setObjectPosition(bubbleRob6, -1, pos6)
+        sim.setObjectPosition(bubbleRob7, -1, pos7)
+        sim.setObjectPosition(bubbleRob8, -1, pos8)
+        sim.setObjectOrientation(bubbleRob1, -1, ang3)
+        sim.setObjectOrientation(bubbleRob2, -1, ang1)
+        sim.setObjectOrientation(bubbleRob3, -1, ang1)
+        sim.setObjectOrientation(bubbleRob4, -1, ang4)
+        sim.setObjectOrientation(bubbleRob5, -1, ang2)
+        sim.setObjectOrientation(bubbleRob6, -1, ang2)
+        sim.setObjectOrientation(bubbleRob7, -1, ang2)
+        sim.setObjectOrientation(bubbleRob8, -1, ang2)
+        score3 = score3 + 1
+        r3=r3-36
+        sim.setJointTargetPosition(joint3, math.rad(r3+180))
+        count2=100
+        for go = 0,14,1 do
+            goal = sim.getObject('./goal_['..go..']')
+            sim.setShapeColor(goal, nil, sim.colorcomponent_ambient_diffuse, {1, 1, 0})
+        end
+        if(r3==0) then
+            r3=360
+            r4=r4-36
+            sim.setJointTargetPosition(joint3, math.rad(r3+180))
+            sim.setJointTargetPosition(joint4, math.rad(r4+180))
+        end
+        if (score3 &lt;= 9) then
+            i = score3 +1
+            for j = 0, 6, 1 do
+                d = sim.getObject('./_G['..j..']')
+                if (s[i][j+1] == 1) then
+                    sim.setShapeColor(d, nil, sim.colorcomponent_ambient_diffuse, {1, 0, 0})
+                else
+                    sim.setShapeColor(d, nil, sim.colorcomponent_ambient_diffuse, {1, 1, 1})
+                end
+            end
+        elseif (score3 &gt; 9 and score4&lt;=9) then
+            score3 = 0
+            for j = 0, 6, 1 do
+                c = sim.getObject('./_G['..j..']')
+                if (s[1][j+1] == 1) then
+                    sim.setShapeColor(c, nil, sim.colorcomponent_ambient_diffuse, {1, 0, 0})
+                else
+                    sim.setShapeColor(c, nil, sim.colorcomponent_ambient_diffuse, {1, 1, 1})
+                end
+            end
+            score4 = score4 + 1
+            i = score4 +1
+            for j = 0, 6, 1 do
+                b = sim.getObject('./G_['..j..']')
+                if (s[i][j+1] == 1) then
+                    sim.setShapeColor(b, nil, sim.colorcomponent_ambient_diffuse, {1, 0, 0})
+                else
+                    sim.setShapeColor(b, nil, sim.colorcomponent_ambient_diffuse, {1, 1, 1})
+                end
+            end         
+        else
+            sim.pauseSimulation()
+        end
+    end
+    if (count2&gt;0 and result2==0)then
+        count2=count2-1
+        if count2 ==0 then
+            for go = 0,14,1 do
+                local goal = sim.getObject('./goal_['..go..']')
+                sim.setShapeColor(goal, nil, sim.colorcomponent_ambient_diffuse, {1, 1, 1})
+            end
+            for i = 0, 8, 1 do
+                if (number == i) then
+                    for j = 0, 6, 1 do
+                        local ng = sim.getObject('./nG_['..j..']')
+                        local n = sim.getObject('./N_['..j..']')
+                        sim.setShapeColor(n, nil, sim.colorcomponent_ambient_diffuse, {1, 1, 0})
+                        sim.setShapeColor(_g_, nil, sim.colorcomponent_ambient_diffuse, {1, 1, 0})
+                        if (s[i+1][j+1] == 1) then
+                            sim.setShapeColor(ng, nil, sim.colorcomponent_ambient_diffuse, {1, 1, 0})
+                        end
+                    end
+                end
+            end
+        end
+    end
+    if (count &gt; 0) then
+    score5 = score5 - 1
+    if(score5&lt;1)then
+    score5 = 99
+    count1 = count1-1
+    end
+        if (count1 &gt;= 0) then
+            
+            for i = 0, 9, 1 do
+                if (count1 == i) then
+                    for j = 0, 6, 1 do
+                        local e = sim.getObject('./_C['..j..']')
+                        if (s[i+1][j+1] == 1) then
+                            sim.setShapeColor(e, nil, sim.colorcomponent_ambient_diffuse, {0, 0, 0})
+                        else
+                            sim.setShapeColor(e, nil, sim.colorcomponent_ambient_diffuse, {1, 1, 1})
+                        end                        
+                    end
+                end
+            end
+        elseif (score6 &gt; 0 and count1 &lt;1) then
+            count1 = 9
+            score6 = score6 - 1
+            for i = 0 , 9, 1 do
+                for j = 0, 6, 1 do
+                    local e = sim.getObject('./_C['..j..']')          
+                    if (s[i+1][j+1] == 1) then
+                        sim.setShapeColor(e, nil, sim.colorcomponent_ambient_diffuse, {0, 0, 0})
+                    else
+                        sim.setShapeColor(e, nil, sim.colorcomponent_ambient_diffuse, {1, 1, 1})
+                    end
+                end
+                if (score6 == i) then
+                    for j = 0, 6, 1 do
+                        local f = sim.getObject('./C_['..j..']')
+                        if (s[i+1][j+1] == 1) then
+                            sim.setShapeColor(f, nil, sim.colorcomponent_ambient_diffuse, {0, 0, 0})
+                        else
+                            sim.setShapeColor(f, nil, sim.colorcomponent_ambient_diffuse, {1, 1, 1})
+                        end                        
+                    end
+                end
+            end
+        elseif (score7 &gt; 0 and score6 &lt; 1) then
+            score5 = 9
+            score6 = 6
+            score7 = score7 - 1
+            for i = 0 , 9, 1 do
+                for j = 0, 6, 1 do
+                    local e = sim.getObject('./_C['..j..']')
+                    local f = sim.getObject('./C_['..j..']')
+                    if (s[i+1][j+1] == 1) then
+                        sim.setShapeColor(e, nil, sim.colorcomponent_ambient_diffuse, {0, 0, 0})
+                        sim.setShapeColor(f, nil, sim.colorcomponent_ambient_diffuse, {0, 0, 0})
+                    else
+                        sim.setShapeColor(e, nil, sim.colorcomponent_ambient_diffuse, {1, 1, 1})
+                        sim.setShapeColor(f, nil, sim.colorcomponent_ambient_diffuse, {1, 1, 1})
+                    end
+                end
+                if (score7 == i) then
+                    for j = 0, 6, 1 do
+                        local g = sim.getObject('./__C['..j..']')
+                        if (s[i+1][j+1] == 1) then
+                            sim.setShapeColor(g, nil, sim.colorcomponent_ambient_diffuse, {0, 0, 0})
+                        else
+                            sim.setShapeColor(g, nil, sim.colorcomponent_ambient_diffuse, {1, 1, 1})
+                        end                        
+                    end
+                end
+            end
+        elseif (score8 &gt; 0 and score7 &lt;1) then
+            score5 = 9
+            score6 = 6
+            score7 = 9
+            score8 = score8 - 1
+            for i = 0 , 9, 1 do
+                for j = 0, 6, 1 do
+                    local e = sim.getObject('./_C['..j..']')
+                    local f = sim.getObject('./C_['..j..']')
+                    local g = sim.getObject('./__C['..j..']')
+                    if (s[i+1][j+1] == 1) then
+                        sim.setShapeColor(e, nil, sim.colorcomponent_ambient_diffuse, {0, 0, 0})
+                        sim.setShapeColor(f, nil, sim.colorcomponent_ambient_diffuse, {0, 0, 0})
+                        sim.setShapeColor(g, nil, sim.colorcomponent_ambient_diffuse, {0, 0, 0})
+                    else
+                        sim.setShapeColor(e, nil, sim.colorcomponent_ambient_diffuse, {1, 1, 1})
+                        sim.setShapeColor(f, nil, sim.colorcomponent_ambient_diffuse, {1, 1, 1})
+                        sim.setShapeColor(g, nil, sim.colorcomponent_ambient_diffuse, {1, 1, 1})
+                    end
+                end
+                if (score8 == i) then
+                    for j = 0, 6, 1 do
+                        local h = sim.getObject('./_C_['..j..']')
+                        if (s[i+1][j+1] == 1) then
+                            sim.setShapeColor(h, nil, sim.colorcomponent_ambient_diffuse, {0, 0, 0})
+                        else
+                            sim.setShapeColor(h, nil, sim.colorcomponent_ambient_diffuse, {1, 1, 1})
+                        end
+                    end
+                end
+            end
+        else
+            sim.stopSimulation()
+        end
+    else
+        sim.stopSimulation()
+    end
+end
+function setDisplayDigit(number, isgreen)
+    for i = 0, 8, 1 do
+        if (number == i) then
+            for j = 0, 6, 1 do
+                local ng = sim.getObject('./nG_['..j..']')
+                local n = sim.getObject('./N_['..j..']')
+                if isgreen then
+                    sim.setShapeColor(n, nil, sim.colorcomponent_ambient_diffuse, {0, 1, 0})
+                    sim.setShapeColor(_g_, nil, sim.colorcomponent_ambient_diffuse, {0, 1, 0})
+                else
+                    sim.setShapeColor(n, nil, sim.colorcomponent_ambient_diffuse, {1, 0, 0})
+                    sim.setShapeColor(_g_, nil, sim.colorcomponent_ambient_diffuse, {1, 0, 0})
+                end
+                if (s[i+1][j+1] == 1) then
+                    if isgreen then
+                    sim.setShapeColor(ng, nil, sim.colorcomponent_ambient_diffuse, {0, 1, 0})
+                    else
+                    sim.setShapeColor(ng, nil, sim.colorcomponent_ambient_diffuse, {1, 0, 0})
+                    end
+                else    
+                sim.setShapeColor(ng, nil, sim.colorcomponent_ambient_diffuse, {1, 1, 1})
+                end
+            end
+        end
+    end
+end
+</pre><br />pj3 << <a href='pj3.html'>Previous</a> <a href='會議記錄.html'>Next</a> >> 會議記錄</div>
+        
+    <!-- footer -->
+      <div class="container">
+        <div class="row pt-3 mx-auto">
+            <p>
+            <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+            Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="icon-heart" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank" >Colorlib</a>
+            <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+            </p>
+        </div>
+      </div>
+    <!-- for footer -->
+    
+        </div> <!-- for site wrap -->
+            <!-- <script src="../cmsimde/static/chimper/js/jquery-3.3.1.min.js"></script> -->
+            <script src="../cmsimde/static/chimper/js/jquery-migrate-3.0.1.min.js"></script>
+            <script src="../cmsimde/static/chimper/js/jquery-ui.js"></script>
+            <script src="../cmsimde/static/chimper/js/popper.min.js"></script>
+            <script src="../cmsimde/static/chimper/js/bootstrap.min.js"></script>
+            <script src="../cmsimde/static/chimper/js/owl.carousel.min.js"></script>
+            <script src="../cmsimde/static/chimper/js/jquery.stellar.min.js"></script>
+            <script src="../cmsimde/static/chimper/js/jquery.countdown.min.js"></script>
+            <script src="../cmsimde/static/chimper/js/jquery.magnific-popup.min.js"></script>
+            <script src="../cmsimde/static/chimper/js/bootstrap-datepicker.min.js"></script>
+            <script src="../cmsimde/static/chimper/js/aos.js"></script>
+            <!--
+            <script src="../cmsimde/static/chimper/js/typed.js"></script>
+                    <script>
+                    var typed = new Typed('.typed-words', {
+                    strings: ["Web Apps"," WordPress"," Mobile Apps"],
+                    typeSpeed: 80,
+                    backSpeed: 80,
+                    backDelay: 4000,
+                    startDelay: 1000,
+                    loop: true,
+                    showCursor: true
+                    });
+                    </script>
+            -->
+            <script src="../cmsimde/static/chimper/js/main.js"></script>
+        
+<!-- 啟用 LaTeX equations 編輯 -->
+  <!-- <script>
+  MathJax = {
+    tex: {inlineMath: [['$', '$'], ['\(', '\)']]}
+  };
+  </script>
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>-->
+    </body></html>
+        
